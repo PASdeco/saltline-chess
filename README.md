@@ -12,8 +12,9 @@ negamax alpha-beta search with zero-window re-searches, a transposition
 table, quiescence, check extensions, late-move reductions, killer moves
 and MVV-LVA move ordering, over a 0x88 board with incremental Zobrist
 hashing. The evaluation is a tapered
-material and piece-square score, with the tables packed one character
-per value to save bytes. It searches every move to a fixed node budget
+material and piece-square score built on the PeSTO values and tables
+(pawns and kings carry a table per phase), packed one character per
+value to save bytes. It searches every move to a fixed node budget
 that steps down as a game grows long, never to a clock, so its games
 replay move for move. main.py is a readable source packed with the
 kit's own compress command, as the competition allows; the unpacked
